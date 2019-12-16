@@ -10,7 +10,10 @@ import { Tab2Page } from './tab2.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab2Page }])
+    RouterModule.forChild([{ path: '', component: Tab2Page },
+    { path: 'tab1detail', loadChildren: () => import('../tab1detail/tab1detail.module').then(m => m.Tab1detailPageModule)
+  }
+  ])
   ],
   declarations: [Tab2Page]
 })
